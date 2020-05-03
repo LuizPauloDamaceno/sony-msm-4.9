@@ -498,9 +498,9 @@ module_param_named(
 );
 
 #ifdef CONFIG_QPNP_SMBCHARGER_EXTENSION
-static int smbchg_default_hvdcp_icl_ma = 1700;
+static int smbchg_default_hvdcp_icl_ma = 1500;
 #else
-static int smbchg_default_hvdcp_icl_ma = 1800;
+static int smbchg_default_hvdcp_icl_ma = 1600;
 #endif
 module_param_named(
 	default_hvdcp_icl_ma, smbchg_default_hvdcp_icl_ma,
@@ -515,9 +515,9 @@ module_param_named(
 
 
 #ifdef CONFIG_QPNP_SMBCHARGER_EXTENSION
-static int smbchg_default_dcp_icl_ma = 1500;
+static int smbchg_default_dcp_icl_ma = 2000;
 #else
-static int smbchg_default_dcp_icl_ma = 1800;
+static int smbchg_default_dcp_icl_ma = 2000;
 #endif
 module_param_named(
 	default_dcp_icl_ma, smbchg_default_dcp_icl_ma,
@@ -4825,7 +4825,7 @@ static int smbchg_set_optimal_charging_mode(struct smbchg_chip *chip, int type)
 }
 
 #define DEFAULT_SDP_MA		100
-#define DEFAULT_CDP_MA		1500
+#define DEFAULT_CDP_MA		2000
 static int smbchg_change_usb_supply_type(struct smbchg_chip *chip,
 						enum power_supply_type type)
 {
