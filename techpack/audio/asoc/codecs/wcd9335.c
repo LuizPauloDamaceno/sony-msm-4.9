@@ -143,7 +143,7 @@
 #define WCD9335_DEC_PWR_LVL_DF 0x00
 #define WCD9335_STRING_LEN 100
 
-#define CALCULATE_VOUT_D(req_mv) (((req_mv - 650) * 10) / 25)
+#define CALCULATE_VOUT_D(req_mv) (((req_mv - 600) * 10) / 25)
 
 static int cpe_debug_mode;
 
@@ -173,8 +173,8 @@ enum {
 };
 
 enum tasha_sido_voltage {
-	SIDO_VOLTAGE_SVS_MV = 950,
-	SIDO_VOLTAGE_NOMINAL_MV = 1100,
+	SIDO_VOLTAGE_SVS_MV = 925,
+	SIDO_VOLTAGE_NOMINAL_MV = 1075,
 };
 
 static enum codec_variant codec_ver;
@@ -210,7 +210,7 @@ static struct afe_param_slimbus_slave_port_cfg tasha_slimbus_slave_port_cfg = {
 	.slimbus_dev_id = AFE_SLIMBUS_DEVICE_1,
 	.slave_dev_pgd_la = 0,
 	.slave_dev_intfdev_la = 0,
-	.bit_width = 16,
+	.bit_width = 24,
 	.data_format = 0,
 	.num_channels = 1
 };
