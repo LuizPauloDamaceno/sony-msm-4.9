@@ -1544,7 +1544,7 @@ static const struct freq_tbl ftbl_gfx3d_clk_src[] = {
 	F( 432000000,   P_GPLL6_GFX3D,  2.5,    0,     0),
 	F( 480000000,   P_GPLL4_GFX3D,  2.5,    0,     0),
 	F( 540000000,   P_GPLL6_GFX3D,    2,    0,     0),
-	F( 600000000,   P_GPLL4_GFX3D,    2,    0,     0),
+	F( 621330000,   P_GPLL4_GFX3D,    2,    0,     0),
 	{ }
 };
 
@@ -1563,7 +1563,7 @@ static struct clk_init_data gfx3d_clk_params = {
 			NOMINAL,	432000000,
 			TURBO,		480000000,
 			TURBO_L1,	540000000,
-			SUPER_TURBO,	600000000),
+			SUPER_TURBO,	621330000),
 };
 
 static struct clk_rcg2 gfx3d_clk_src = {
