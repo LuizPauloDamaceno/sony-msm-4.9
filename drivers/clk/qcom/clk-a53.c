@@ -32,6 +32,8 @@ static struct pll_freq_tbl apcs_pll_freq[] = {
 	F_APCS_PLL(1152000000, 62, 0x0, 0x1),
 	F_APCS_PLL(1209600000, 65, 0x0, 0x1),
 	F_APCS_PLL(1401600000, 73, 0x0, 0x1),
+	F_APCS_PLL(1440000000, 75, 0x0, 0x1),
+	F_APCS_PLL(1536000000, 80, 0x0, 0x1),
 };
 
 static struct clk_pll a53sspll = {

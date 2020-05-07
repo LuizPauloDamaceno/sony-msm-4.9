@@ -226,7 +226,7 @@ static struct clk_fixed_factor a72ss_hf_pll_main = {
 	},
 };
 
-/* Early output of PLL: 1.4GHz default */
+/* Early output of PLL: 1.5GHz default */
 static struct hfpll_data a53ss_sr_pll_data = {
 	.mode_reg = 0x0,
 	.l_reg = 0x4,
@@ -248,7 +248,7 @@ static struct hfpll_data a53ss_sr_pll_data = {
 	.user_vco_val = 0x00141400,
 	.vco_mode_masked = BIT(20),
 	.min_rate = 652800000UL,
-	.max_rate = 1478400000UL,
+	.max_rate = 1550000000UL,
 	.low_vco_max_rate = 902400000UL,
 	.l_val = 0x49,
 	.safe_parking_enabled = false,
