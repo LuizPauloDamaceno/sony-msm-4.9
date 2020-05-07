@@ -957,7 +957,7 @@ static const struct freq_tbl ftbl_cpp_clk_src[] = {
 	F( 240000000,     P_GPLL4_AUX,    5,    0,     0),
 	F( 320000000,P_GPLL0_OUT_MAIN,  2.5,    0,     0),
 	F( 400000000,P_GPLL0_OUT_MAIN,    2,    0,     0),
-	F( 480000000,     P_GPLL4_AUX,  2.5,    0,     0),
+	F( 528000000,     P_GPLL4_AUX,    2,    0,     0),
 	{ }
 };
 
@@ -972,7 +972,7 @@ static struct clk_rcg2 cpp_clk_src = {
 		.num_parents = ARRAY_SIZE(gcc_parent_names_cpp),
 		.ops = &clk_rcg2_ops,
 		VDD_DIG_FMAX_MAP5(LOWER, 160000000, LOW, 240000000,
-		NOMINAL, 320000000, NOM_PLUS, 400000000, HIGH, 480000000),
+		NOMINAL, 320000000, NOM_PLUS, 400000000, HIGH, 528000000),
 	},
 };
 
@@ -1242,7 +1242,7 @@ static const struct freq_tbl ftbl_vfe0_clk_src[] = {
 	F( 300000000,     P_GPLL4_OUT,    4,    0,     0),
 	F( 320000000,P_GPLL0_OUT_MAIN,  2.5,    0,     0),
 	F( 400000000,P_GPLL0_OUT_MAIN,    2,    0,     0),
-	F( 466000000,     P_GPLL2_AUX,    2,    0,     0),
+	F( 512600000,     P_GPLL4_OUT,    2,    0,     0),
 	{ }
 };
 
@@ -1258,7 +1258,7 @@ static struct clk_rcg2 vfe0_clk_src = {
 		.ops = &clk_rcg2_ops,
 		VDD_DIG_FMAX_MAP5(LOWER, 160000000, LOW, 300000000,
 		NOMINAL, 320000000, NOM_PLUS, 400000000,
-		HIGH, 466000000),
+		HIGH, 512600000),
 	},
 };
 
@@ -1274,7 +1274,7 @@ static const struct freq_tbl ftbl_vfe1_clk_src[] = {
 	F( 300000000,     P_GPLL4_OUT,    4,    0,     0),
 	F( 320000000,P_GPLL0_OUT_MAIN,  2.5,    0,     0),
 	/*F( 400000000,P_GPLL0_OUT_MAIN,    2,    0,     0),*/
-	F( 466000000,     P_GPLL2_AUX,    2,    0,     0),
+	F( 512600000,     P_GPLL4_OUT,    2,    0,     0),
 	{ }
 };
 
@@ -1289,8 +1289,8 @@ static struct clk_rcg2 vfe1_clk_src = {
 		.num_parents = ARRAY_SIZE(gcc_parent_names_2),
 		.ops = &clk_rcg2_ops,
 		VDD_DIG_FMAX_MAP5(LOWER, 160000000, LOW, 300000000,
-		NOMINAL, 320000000, NOM_PLUS, 466000000,
-		HIGH, 466000000),
+		NOMINAL, 320000000, NOM_PLUS, 512600000,
+		HIGH, 512600000),
 	},
 };
 
@@ -1544,7 +1544,7 @@ static const struct freq_tbl ftbl_gfx3d_clk_src[] = {
 	F( 432000000,   P_GPLL6_GFX3D,  2.5,    0,     0),
 	F( 480000000,   P_GPLL4_GFX3D,  2.5,    0,     0),
 	F( 540000000,   P_GPLL6_GFX3D,    2,    0,     0),
-	F( 600000000,   P_GPLL4_GFX3D,    2,    0,     0),
+	F( 690000000,   P_GPLL4_GFX3D,    2,    0,     0),
 	{ }
 };
 
@@ -1563,7 +1563,7 @@ static struct clk_init_data gfx3d_clk_params = {
 			NOMINAL,	432000000,
 			TURBO,		480000000,
 			TURBO_L1,	540000000,
-			SUPER_TURBO,	600000000),
+			SUPER_TURBO,	690000000),
 };
 
 static struct clk_rcg2 gfx3d_clk_src = {
@@ -1813,7 +1813,7 @@ static const struct freq_tbl ftbl_vcodec0_clk_src[] = {
 	F( 310666666,     P_GPLL2_AUX,    3,    0,     0),
 	F( 360000000,     P_GPLL6_AUX,    3,    0,     0),
 	F( 400000000,P_GPLL0_OUT_MAIN,    2,    0,     0),
-	F( 466000000,     P_GPLL2_AUX,    2,    0,     0),
+	F( 512600000,     P_GPLL6_AUX,    2,    0,     0),
 	{ }
 };
 
@@ -1830,7 +1830,7 @@ static struct clk_rcg2 vcodec0_clk_src = {
 		.ops = &clk_rcg2_ops,
 		VDD_DIG_FMAX_MAP5(LOWER, 228571428, LOW, 310666666,
 		NOMINAL, 360000000, NOM_PLUS, 400000000,
-		HIGH, 466000000),
+		HIGH, 512600000),
 	},
 };
 
@@ -3267,7 +3267,7 @@ static struct clk_branch gcc_oxili_gfx3d_clk = {
 			.flags = CLK_SET_RATE_PARENT,
 			VDD_DIG_GFX_FMAX_MAP5(LOWER, 300000000, LOW, 360000000,
 				NOMINAL, 432000000, NOM_PLUS, 480000000,
-				HIGH, 600000000),
+				HIGH, 690000000),
 			.ops = &clk_branch2_ops,
 		},
 	},
