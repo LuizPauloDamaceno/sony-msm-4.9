@@ -143,7 +143,7 @@
 #define WCD9335_DEC_PWR_LVL_DF 0x00
 #define WCD9335_STRING_LEN 100
 
-#define CALCULATE_VOUT_D(req_mv) (((req_mv - 600) * 10) / 25)
+#define CALCULATE_VOUT_D(req_mv) (((req_mv - 500) * 10) / 25)
 
 static int cpe_debug_mode;
 
@@ -861,8 +861,8 @@ static const struct tasha_reg_mask_val tasha_spkr_default[] = {
 	{WCD9335_CDC_COMPANDER8_CTL3, 0x80, 0x80},
 	{WCD9335_CDC_COMPANDER7_CTL7, 0x01, 0x01},
 	{WCD9335_CDC_COMPANDER8_CTL7, 0x01, 0x01},
-	{WCD9335_CDC_BOOST0_BOOST_CTL, 0x7C, 0x58},
-	{WCD9335_CDC_BOOST1_BOOST_CTL, 0x7C, 0x58},
+	{WCD9335_CDC_BOOST0_BOOST_CTL, 0x7C, 0x5C},
+	{WCD9335_CDC_BOOST1_BOOST_CTL, 0x7C, 0x5C},
 };
 
 static const struct tasha_reg_mask_val tasha_spkr_mode1[] = {
@@ -870,8 +870,8 @@ static const struct tasha_reg_mask_val tasha_spkr_mode1[] = {
 	{WCD9335_CDC_COMPANDER8_CTL3, 0x80, 0x00},
 	{WCD9335_CDC_COMPANDER7_CTL7, 0x01, 0x00},
 	{WCD9335_CDC_COMPANDER8_CTL7, 0x01, 0x00},
-	{WCD9335_CDC_BOOST0_BOOST_CTL, 0x7C, 0x44},
-	{WCD9335_CDC_BOOST1_BOOST_CTL, 0x7C, 0x44},
+	{WCD9335_CDC_BOOST0_BOOST_CTL, 0x7C, 0x46},
+	{WCD9335_CDC_BOOST1_BOOST_CTL, 0x7C, 0x46},
 };
 
 /**
@@ -12493,7 +12493,7 @@ static const struct tasha_reg_mask_val tasha_codec_reg_init_val_2_0[] = {
 	{WCD9335_RCO_CTRL_2, 0x0F, 0x08},
 	{WCD9335_RX_BIAS_FLYB_MID_RST, 0xF0, 0x10},
 	{WCD9335_FLYBACK_CTRL_1, 0x20, 0x20},
-	{WCD9335_HPH_OCP_CTL, 0xFF, 0x7A},
+	{WCD9335_HPH_OCP_CTL, 0xFF, 0xAF},
 	{WCD9335_HPH_L_TEST, 0x01, 0x01},
 	{WCD9335_HPH_R_TEST, 0x01, 0x01},
 	{WCD9335_CDC_BOOST0_BOOST_CFG1, 0x3F, 0x12},
@@ -12540,8 +12540,8 @@ static const struct tasha_reg_mask_val tasha_codec_reg_init_common_val[] = {
 	{WCD9335_CDC_CLSH_K2_MSB, 0x0F, 0x00},
 	{WCD9335_CDC_CLSH_K2_LSB, 0xFF, 0x60},
 	{WCD9335_CPE_SS_DMIC_CFG, 0x80, 0x00},
-	{WCD9335_CDC_BOOST0_BOOST_CTL, 0x7C, 0x58},
-	{WCD9335_CDC_BOOST1_BOOST_CTL, 0x7C, 0x58},
+	{WCD9335_CDC_BOOST0_BOOST_CTL, 0x7C, 0x5C},
+	{WCD9335_CDC_BOOST1_BOOST_CTL, 0x7C, 0x5C},
 	{WCD9335_CDC_RX7_RX_PATH_CFG1, 0x08, 0x08},
 	{WCD9335_CDC_RX8_RX_PATH_CFG1, 0x08, 0x08},
 	{WCD9335_ANA_LO_1_2, 0x3C, 0X3C},
@@ -12623,7 +12623,7 @@ static const struct tasha_reg_mask_val tasha_codec_reg_init_1_x_val[] = {
 	{WCD9335_CDC_RX5_RX_PATH_SEC0, 0xF8, 0xF8},
 	{WCD9335_CDC_RX6_RX_PATH_SEC0, 0xF8, 0xF8},
 	{WCD9335_RX_OCP_COUNT, 0xFF, 0xFF},
-	{WCD9335_HPH_OCP_CTL, 0xF0, 0x70},
+	{WCD9335_HPH_OCP_CTL, 0xF0, 0xAF},
 	{WCD9335_CPE_SS_CPAR_CFG, 0xFF, 0x00},
 	{WCD9335_FLYBACK_VNEG_CTRL_1, 0xFF, 0x63},
 	{WCD9335_FLYBACK_VNEG_CTRL_4, 0xFF, 0x7F},
